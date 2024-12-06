@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "name": "ದೋಣಿ ಸಾಗಲಿ, ಮುಂದೆ ಹೋಗಲಿ",
+            "content": "content/content1.txt"
+        },
+        {
+            "name": "ಕಾಯೌ ಶ್ರೀ ಗೌರಿ",
+            "content": "content/content2.txt"
+        }
+    ]
+}

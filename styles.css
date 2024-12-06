@@ -1,0 +1,101 @@
+:root {
+  --primary-bg-color: #DAC8B1;
+  --secondary-bg-color: #020101;
+  --primary-text-color: #100C07;
+  --seondary-text-color: #25201A;
+  --tooltip-text-color: #D8CDA9;
+  --body-text: 1.1em;
+}
+body {
+  background-color: var(--primary-bg-color);
+  margin: 8vw;
+}
+h1 {
+  font-family: "Anek Kannada", sans-serif;
+  font-size: 1.3em;
+  color: var(--primary-text-color);
+  font-style: italic;
+  font-weight: 300;
+}
+.kannada-font {
+  font-family: 'Time';
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.main-container {
+  margin-top: 4em;
+}
+.list-item {
+  padding-bottom: 6px;
+}
+a, .title {
+  font-family: "Anek Kannada", sans-serif;
+  font-size: var(--body-text);
+  color: var(--seondary-text-color);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+a:hover {
+  color: var(--primary-text-color);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+p {
+  font-family: "Anek Kannada", sans-serif;
+  color: var(--seondary-text-color);
+  font-size: var(--body-text);
+  font-weight: 400;
+  line-height: 1.8em;
+}
+.visited-link {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.visited-link:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tooltip::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--secondary-bg-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  opacity: 0.2;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  border-radius: 6px;
+  padding: 8px;
+  padding-bottom: 1px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 110%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: max-content;
+  max-width: 20vw !important;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  background-color: var(--secondary-bg-color);
+  color: var(--tooltip-text-color);
+  line-height: 100%;
+}
