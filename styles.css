@@ -71,8 +71,8 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 4px;
-  opacity: 0.2;
+  bottom: 8px;
+  opacity: 0.12;
 }
 
 .tooltip .tooltiptext {
