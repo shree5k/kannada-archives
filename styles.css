@@ -79,17 +79,18 @@ p {
   visibility: hidden;
   border-radius: 6px;
   padding: 8px;
-  padding-bottom: 1px;
+  padding-bottom: 2px;
   height: auto;
   position: absolute;
   z-index: 1;
   bottom: 105%;
-  left: 110%;
-  margin-left: -60px;
+  left: 50%;
+  margin-left: -50%;
   opacity: 0;
   transition: opacity 0.3s;
   width: max-content;
-  max-width: 20vw !important;
+  max-width: 180px;
+  white-space: normal;
 }
 
 .tooltip:hover .tooltiptext {
