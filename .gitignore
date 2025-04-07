@@ -1,0 +1,53 @@
+# macOS files
+.DS_Store
+*.DS_Store
+._*
+
+# Build output
+/dist
+/build
+/out
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Cache
+.cache/
+npm-cache/
+.cache/
+*.cache
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Local development files
+*.local
+*.dev
+*.development
+*.test
+*.production

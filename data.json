@@ -7,6 +7,10 @@
         {
             "name": "ಕಾಯೌ ಶ್ರೀ ಗೌರಿ",
             "content": "content/content2.txt"
+        },
+        {
+            "name": "ಎಂತ ಸಹ ಇಲ್ಲ",
+            "content": "content/content3.txt"
         }
     ]
 }
