@@ -13,7 +13,7 @@ const meanings = {
 
 async function loadNames() {
     try {
-        const response = await fetch('data.json?v=' + new Date().getTime());
+        const response = await fetch(`data.json?v=${Date.now()}`);
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         const container = document.querySelector('.main-container');
@@ -25,8 +25,6 @@ async function loadNames() {
             container.appendChild(div);
         });
     } catch (error) {
-        const container = document.querySelector('.main-container');
-        container.innerHTML = 'Error loading names: ' + error.message;
         console.error('Error fetching data:', error);
     }
 }
@@ -38,26 +36,26 @@ async function showContent(contentFile, name) {
         currentContent = null;
         loadNames(); // Reload names
     } else {
-        // Fetch the content from the text file with cache busting
+        // Fetch the content from the text file
         try {
-            const response = await fetch(contentFile + '?v=' + new Date().getTime());
+            const response = await fetch(contentFile);
             if (!response.ok) throw new Error('Network response was not ok');
             const content = await response.text();
             currentContent = content;
             const tooltipContent = replaceWithTooltips(content);
             container.innerHTML = `<a onclick="showNames()" class="visited-link" style="cursor: pointer;">${name}</a><p>${tooltipContent}</p>`;
         } catch (error) {
-            container.innerHTML = 'Error loading content: ' + error.message;
             console.error('Error fetching content:', error);
         }
     }
 }
 
 function replaceWithTooltips(content) {
-    // Ensure meanings object is defined and accessible
-    const words = Object.keys(meanings).join('|'); 
-    const regex = new RegExp(`(${words})`, 'g'); 
+    // Create a regular expression from the keys in the meanings object
+    const words = Object.keys(meanings).join('|'); // Join keys with '|'
+    const regex = new RegExp(`(${words})`, 'g'); // Create a regex to match any of the words
 
+    // Replace matched words with tooltip spans
     return content.replace(regex, (match) => {
         return `<span class="tooltip">${match}<span class="tooltiptext">${meanings[match]}</span></span>`;
     });
