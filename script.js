@@ -13,7 +13,7 @@ const meanings = {
 
 async function loadNames() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('data.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         const container = document.querySelector('.main-container');
